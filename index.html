@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="project1.css">
     <style>
 
+#preloader{
+  background: white url(lg.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
       body{
         overflow-x: hidden;
       }
@@ -32,7 +39,7 @@
     </style>
 </head>
 <body> 
-
+ <div id="preloader"></div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
         <div class="container-fluid">
           <a class="navbar-brand fs-light" href="#"><img src="https://i.pinimg.com/736x/36/70/e1/3670e1e4b38644102d5ffc2af6998cf0.jpg" height="50px" width="80px"></a>
@@ -324,6 +331,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+      </script>
+
+      <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+          loader.style.display="none";
+        })
       </script>
 </body>
 </html>
